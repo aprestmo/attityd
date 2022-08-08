@@ -1,0 +1,35 @@
+---
+const addressInfo = ['Ammerudveien 29 D', '0958 Oslo', '917 489 874 MVA']
+---
+<footer>
+  <address>
+    <b>Attityd</b>
+    {addressInfo.map( info =>
+      <span>{info}</span>
+    )}
+  </address>
+</footer>
+
+<style>
+  footer {
+    padding: 1rem;
+  }
+
+  address {
+    column-gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    justify-content: space-evenly;
+    margin-inline: auto;
+    max-inline-size: 48rem;
+    pointer-events: none;
+    row-gap: 0.5rem;
+  }
+
+  b {
+    font-weight: 600;
+  }
+</style>

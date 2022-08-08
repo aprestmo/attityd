@@ -1,0 +1,33 @@
+---
+export async function getStaticPaths({paginate}) {
+  const allProjects = await Astro.glob('./../prosjekt/*.md');
+
+  return paginate(allProjects, {pageSize: 1})
+}
+
+const { page } = Astro.props;
+console.log(page);
+---
+<html lang="en">
+  <head>
+    <title>Pagination Example</title>
+  </head>
+  <body>
+    <h1>Alle prosjekter</h1>
+    {page.data.map((prosjekt) => (
+    <a href="{prosjekt.url}">
+      <h1>{prosjekt.title}</h1>
+      <img src={`https://res.cloudinary.com/attityd/image/upload/${prosjekt.imageTransform ? prosjekt.imageTransform : ''}/v1602673176/samples/animals/${prosjekt.image}`} width="300">
+    </a>
+    ))}
+
+    <footer>
+      <h4>Page {page.currentPage} / {page.lastPage}</h4>
+      <nav class="nav">
+        <a class="prev" href={page.url.prev || '#'}>Prev</a>
+        |
+        <a class="next" href={page.url.next || '#'}>Next</a>
+      </nav>
+    </footer>
+  </body>
+</html>

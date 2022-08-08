@@ -1,0 +1,17 @@
+---
+export interface Props {
+  prosjekt: {
+      url: string;
+      title: string;
+      image: string;
+  };
+}
+const { prosjekt } = Astro.props;
+---
+<article>
+  <a href="{prosjekt.url}">
+    <!-- Hent fra Cloudinary -->
+    <img src="{prosjekt.image}" alt="{prosjekt.title}" />
+    <h3>{prosjekt.title}</h3>
+  </a>
+</article>

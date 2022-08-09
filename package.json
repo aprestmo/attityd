@@ -6,9 +6,11 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "deploy:preview": "netlify deploy",
+    "deploy:prod": "netlify deploy --prod"
   },
   "devDependencies": {
-    "astro": "^1.0.0-rc.7"
+    "astro": "^1.0.0-rc.8"
   }
 }

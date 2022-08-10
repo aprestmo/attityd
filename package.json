@@ -11,6 +11,6 @@
     "deploy:prod": "netlify deploy --prod"
   },
   "devDependencies": {
-    "astro": "^1.0.0-rc.8"
+    "astro": "^1.0.1"
   }
 }

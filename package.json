@@ -11,6 +11,13 @@
     "deploy:prod": "netlify deploy --prod"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "astro": "^1.0.1"
+=======
+    "astro": "^1.0.3"
+  },
+  "dependencies": {
+    "netlify-cli": "^10.17.2"
+>>>>>>> fe2b71c (Update Astro to 1.0.3)
   }
 }

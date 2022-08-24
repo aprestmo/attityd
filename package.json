@@ -1,5 +1,5 @@
 {
-  "name": "@example/minimal",
+  "name": "@example/basics",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,17 +7,14 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "astro": "astro",
     "deploy:preview": "netlify deploy",
     "deploy:prod": "netlify deploy --prod"
   },
   "devDependencies": {
-<<<<<<< HEAD
-    "astro": "^1.0.1"
-=======
-    "astro": "^1.0.3"
+    "astro": "^1.0.8"
   },
   "dependencies": {
-    "netlify-cli": "^10.17.2"
->>>>>>> fe2b71c (Update Astro to 1.0.3)
+    "netlify-cli": "^11.5.0"
   }
 }

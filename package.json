@@ -1,5 +1,5 @@
 {
-  "name": "@example/basics",
+  "name": "attityd",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,14 +7,9 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "deploy:preview": "netlify deploy",
-    "deploy:prod": "netlify deploy --prod"
+    "astro": "astro"
   },
   "devDependencies": {
     "astro": "^1.1.1"
-  },
-  "dependencies": {
-    "netlify-cli": "^11.5.1"
   }
 }

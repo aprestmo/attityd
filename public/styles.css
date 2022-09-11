@@ -33,17 +33,26 @@ body {
   display: grid;
   font-family: 'Silka', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: auto 1fr auto;
   justify-content: center;
   margin: 0;
   overscroll-behavior-block: none;
-  padding: 0.5rem;
+  padding-block: 4rem;
+  padding-inline: 0.5rem;
 }
 
 @supports (-webkit-touch-callout: none) {
   body {
     block-size: -webkit-fill-available;
   }
+}
+
+header {
+  align-items: center;
+  display: flex;
+  inline-size: min(112.5rem, 100vw - 2rem);
+  justify-content: space-between;
+  margin-inline: auto;
 }
 
 main {
@@ -59,7 +68,7 @@ h1 {
 
 svg {
   block-size: 100%;
-  inline-size: clamp(16rem, 32vmax, 24rem);
+  inline-size: clamp(8rem, 16vmax, 12rem);
 }
 
 svg path {
@@ -144,24 +153,8 @@ a:focus-visible {
   }
 }
 
-.blob {
-  --blend-mode: multiply;
-  inline-size: clamp(18rem, 60vw, 32rem);
-  inset-block-start: 50%;
-  inset-inline-start: 50%;
-  mix-blend-mode: var(--blend-mode);
-  opacity: 0.2;
-  position: fixed;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-}
-
 @media (prefers-color-scheme: dark) {
   button::after {
     --button-color: transparent;
-  }
-
-  .blob {
-    --blend-mode: difference;
   }
 }

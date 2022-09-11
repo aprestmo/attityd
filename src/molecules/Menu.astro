@@ -1,17 +1,18 @@
 ---
-
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1);
 ---
 
 <nav>
   <ul>
     <li>
-      <a href="/">About</a>
+      <a class={currentPath === "" ? "active" : ""} href="/">Home</a>
     </li>
     <li>
-      <a href="/work">Work</a>
+      <a class={currentPath === "portfolio" ? "active" : ""} href="/work">Work</a>
     </li>
     <li>
-      <a href="/contact">Contact</a>
+      <a class={currentPath === "posts" ? "active" : ""} href="/contact">Contact</a>
     </li>
   </ul>
 </nav>
@@ -23,13 +24,14 @@
     list-style-type: none;
     padding-inline-start: 0;
   }
-
-  li {
-
-  }
-
   a {
     font-weight: 400;
     font-size: 1.5em;
+  }
+
+  a[aria-current='page'] {
+    background-color: var(--theme-bg-accent);
+    color: var(--theme-text-accent);
+    font-weight: 600;
   }
 </style>

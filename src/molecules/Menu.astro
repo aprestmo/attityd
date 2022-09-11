@@ -3,7 +3,7 @@ const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1);
 ---
 
-<span aria-current={pathname === currentPath}>{pathname}</span>
+<!-- <span aria-current={pathname === currentPath}>{pathname}</span> -->
 
 <nav>
   <ul>

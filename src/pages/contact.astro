@@ -6,7 +6,9 @@ import Footer from '../layouts/Footer.astro';
 <Layout title="Kontakt">
   <Header/>
   <main>
-    <a href="mailto:hei@attityd.no">hei@attityd.no</a>
+    <a href=`mailto:${import.meta.env.EMAIL}`>
+      {import.meta.env.EMAIL}
+    </a>
   </main>
   <Footer/>
 </Layout>

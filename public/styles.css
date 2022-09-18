@@ -67,15 +67,6 @@ h1 {
   display: flex;
 }
 
-svg {
-  block-size: 100%;
-  inline-size: clamp(8rem, 16vmax, 12rem);
-}
-
-svg path {
-  fill: var(--brand-color);
-}
-
 p {
   font-size: clamp(1.25rem, 5vw, 2.5rem);
   line-height: 1.3;

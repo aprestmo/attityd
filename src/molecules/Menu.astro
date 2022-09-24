@@ -2,17 +2,17 @@
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1);
 ---
-
+{pathname} - {currentPath}
 <nav id="mainnav">
   <ul>
     <li>
-      <a aria-current={pathname === currentPath} href="/">Home</a>
+      <a aria-current={pathname === currentPath ? 'page' : ''} href="/">Home</a>
     </li>
     <li>
-      <a aria-current={pathname === currentPath} href="#work">Work</a>
+      <a aria-current={pathname === currentPath ? 'page' : ''} href="/work">Work</a>
     </li>
     <li>
-      <a aria-current={pathname === currentPath} href="#contact">Contact</a>
+      <a aria-current={pathname === currentPath ? 'page' : ''} href="/contact">Contact</a>
     </li>
   </ul>
 </nav>
@@ -48,7 +48,7 @@ const currentPath = pathname.slice(1);
 </script>
 
 <style>
-  /* ul {
+  ul {
     column-gap: 2em;
     display: flex;
     list-style-type: none;
@@ -63,7 +63,7 @@ const currentPath = pathname.slice(1);
     background-color: var(--theme-bg-accent);
     color: var(--theme-text-accent);
     font-weight: 600;
-  } */
+  }
 
   /* Define variables for your colors */
   /* :root {

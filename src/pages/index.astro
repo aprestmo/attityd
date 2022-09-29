@@ -111,7 +111,7 @@ import Footer from '../layouts/Footer.astro';
             setTimeout(() => {
               event.target.style.setProperty('--state', 'hidden')
             }, 1000)
-          }, 3000)
+          }, 30000)
         } catch (err) {
           console.error('Kunne ikke kopiere!', err)
         }
@@ -133,7 +133,7 @@ import Footer from '../layouts/Footer.astro';
   </body>
 </html>
 
-<style>
+<style is:global>
   ::selection {
     background-color: var(--brand-color);
     color: hsla(0, 100%, 100%, 0.95);

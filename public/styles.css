@@ -23,6 +23,31 @@
   margin: 0;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: boder-box;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 body {
   --brand-color: hsl(253.3, 44.7%, 49.6%);
   align-items: center;

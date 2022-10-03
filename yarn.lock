@@ -25,12 +25,13 @@
   resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-0.25.1.tgz#0b55aa29fea5673deb5d47899ad86e2dbcb4cb79"
   integrity sha512-rDuTM9p8HVeHB0/qUiBHgEHRBf/3otcP+wLs3kRXk/quJs0vpCruq42vGsmE1ZFuBi8Ie5mz8fWGm7F6nHhXaQ==
 
-"@astrojs/image@^0.9.0":
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/@astrojs/image/-/image-0.9.0.tgz#116c373880aed496a50412ea8f1e36ee0fcb4313"
-  integrity sha512-m+R4ZeI6jhV7vQ3iA8ox7g5C953xGcTgI7aeme2DBtDQuGiqR4XhWFFzv0uX4Qsa+dT1fJ02mriTbWZPrBGXMA==
+"@astrojs/image@^0.9.1":
+  version "0.9.1"
+  resolved "https://registry.yarnpkg.com/@astrojs/image/-/image-0.9.1.tgz#32ae3fe330c294c4922d2d380c22468fdf48baa8"
+  integrity sha512-tnrL9tL539gIzkM9oqRd+asOePPUE/ehtQjmrcsTjJtQx8aPhKHEteJIMuDhby94wRhV6vMK1Wqt4u5DBf6GQQ==
   dependencies:
     "@altano/tiny-async-pool" "^1.0.2"
+    http-cache-semantics "^4.1.0"
     image-size "^1.0.2"
     magic-string "^0.25.9"
     mime "^3.0.0"
@@ -738,10 +739,10 @@ astro-compress@^1.0.9:
     svgo "2.8.0"
     terser "5.15.0"
 
-astro@^1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/astro/-/astro-1.4.1.tgz#b46de1f9815631880f8849a8285ecdb56192d08f"
-  integrity sha512-Lu4B+D8ziomCKIR7ASN7iexDJzbfg611AkUMhqD9nHQg1qdIjlpKDdeyWUNoi6usYjFDlE4cJuG4vcD3Q8FAbw==
+astro@^1.4.2:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/astro/-/astro-1.4.2.tgz#1b3ac94f9d348274f5ac8aac1c723c81692a1086"
+  integrity sha512-v6GxDQoy8edDEJHopPeQg3TY9ghiJhx/n5mWpXdczPIvft3av6GhDn9yNnEKn6u0vHG9eX0sQxNCwXDlZMExAw==
   dependencies:
     "@astrojs/compiler" "^0.25.0"
     "@astrojs/language-server" "^0.26.2"
@@ -1988,6 +1989,11 @@ html-void-elements@^2.0.0:
   version "2.0.1"
   resolved "https://registry.npmjs.org/html-void-elements/-/html-void-elements-2.0.1.tgz"
   integrity sha512-0quDb7s97CfemeJAnW9wC0hw78MtW7NU3hqtCD75g2vFlDLt36llsYD7uB7SUzojLMP24N5IatXf7ylGXiGG9A==
+
+http-cache-semantics@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/http-cache-semantics/-/http-cache-semantics-4.1.0.tgz#49e91c5cbf36c9b94bcfcd71c23d5249ec74e390"
+  integrity sha512-carPklcUh7ROWRK7Cv27RPtdhYhUsela/ue5/jKzjegVvXDqM2ILE9Q2BGn9JZJh1g87cp56su/FgQSzcWS8cQ==
 
 human-signals@^3.0.1:
   version "3.0.1"

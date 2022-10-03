@@ -6,11 +6,21 @@ import Footer from '../layouts/Footer.astro';
 <Layout title="Welcome to Astro.">
   <Header/>
   <main>
-    <p>
-      Frilans design studio som leverer estetiske og funksjonelle løsninger.
-      Ta kontakt om du har et prosjekt du vil snakke om.
-    </p>
-    <a href="mailto:hei@attityd.no">hei@attityd.no</a>
+    <section id="intro">
+      <p>
+        Frilans design studio som leverer estetiske og funksjonelle løsninger.
+        Ta kontakt om du har et prosjekt du vil snakke om.
+      </p>
+    </section>
+    <section id="contact">
+      <a href="mailto:hei@attityd.no">hei@attityd.no</a>
+    </section>
   </main>
   <Footer/>
 </Layout>
+
+<style>
+  #intro {
+    block-size: 200vh;
+  }
+</style>

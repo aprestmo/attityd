@@ -2,17 +2,16 @@
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1);
 ---
-{pathname} - {currentPath}
 <nav id="mainnav">
   <ul>
     <li>
       <a aria-current={pathname === currentPath ? 'page' : ''} href="/">Home</a>
     </li>
     <li>
-      <a aria-current={pathname === currentPath ? 'page' : ''} href="/work">Work</a>
+      <a aria-current={pathname === currentPath ? 'page' : ''} href="#work">Work</a>
     </li>
     <li>
-      <a aria-current={pathname === currentPath ? 'page' : ''} href="/contact">Contact</a>
+      <a aria-current={pathname === currentPath ? 'page' : ''} href="#contact">Contact</a>
     </li>
   </ul>
 </nav>

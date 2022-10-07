@@ -15,10 +15,10 @@
   resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-0.23.5.tgz#ea57a2b994b2930e3b3d2d524f10866698fef4f1"
   integrity sha512-vBMPy9ok4iLapSyCCT1qsZ9dK7LkVFl9mObtLEmWiec9myGHS9h2kQY2xzPeFNJiWXUf9O6tSyQpQTy5As/p3g==
 
-"@astrojs/compiler@^0.25.0":
-  version "0.25.2"
-  resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-0.25.2.tgz#ecd59e60bc997c6b80cdf934ad302403a0ee387f"
-  integrity sha512-GE7uLvH7rSHuTHdMun+867TWsgYNYsaGuhvXsywcaabl4W4n/3b1kzgzrIsrXYBo51J0k6qD33mVdsHdvwv5rw==
+"@astrojs/compiler@^0.26.0":
+  version "0.26.1"
+  resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-0.26.1.tgz#b57f51c9b099b5fbab4db0bcd51189a16a568ec7"
+  integrity sha512-GoRi4qB05u+bVcSlR9nu9HJfSUGFBcoUUb+WFimKSm9e/KPTy0STOMb/Q0mLIcloavF4KvEqAnd9ukX62ewoaA==
 
 "@astrojs/language-server@^0.26.2":
   version "0.26.2"
@@ -665,10 +665,10 @@ ast-types@0.14.2:
   dependencies:
     tslib "^2.0.1"
 
-astro-compress@^1.0.8:
-  version "1.0.10"
-  resolved "https://registry.yarnpkg.com/astro-compress/-/astro-compress-1.0.10.tgz#15f8acc3b06b919a9b825807d1fa700a20529061"
-  integrity sha512-GhCkmiiIxTNIIvg0SDlssQr202xh4qDBeHdK2rh4X6bHMG2k86Ue5yfUnFO5Uv/ohOuh2o//mlYdUf8cW2YEKg==
+astro-compress@^1.0.11:
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/astro-compress/-/astro-compress-1.0.11.tgz#8548a50aea03251a5cdff1b0597381bfd74253ae"
+  integrity sha512-0ikkXyFAE1pZE9Wls9kk7QhEdGRyqh7IFWfR+q9aLKPeHJfh/7EO8oDnD68E5PPKL/RbxBjwJEzhhICK9CYj2Q==
   dependencies:
     csso "5.0.5"
     deepmerge-ts "4.2.2"
@@ -676,14 +676,14 @@ astro-compress@^1.0.8:
     html-minifier-terser "7.0.0"
     sharp "0.31.1"
     svgo "2.8.0"
-    terser "5.15.0"
+    terser "5.15.1"
 
-astro@^1.4.0:
-  version "1.4.4"
-  resolved "https://registry.yarnpkg.com/astro/-/astro-1.4.4.tgz#c64ee6087c0ebf27c24c38a57d2f4f43fd1263f5"
-  integrity sha512-vxuHJ8C/3/NDau6EDUvi83JFDBK5Ylmo6VGAsUkdnutpGw77I4NoapoN56ANmU54ucYiu+x0apEPQvesY6GZiQ==
+astro@^1.4.5:
+  version "1.4.5"
+  resolved "https://registry.yarnpkg.com/astro/-/astro-1.4.5.tgz#6515d8d6edd0d73be80707408c345dfe8c8c7b9a"
+  integrity sha512-7uflNdFMsAONkEdtNRqP1XgtgdUhiiFfYd3DjtaoaskYhcnfKKYy8Lht0stIQaMtAqITIy0LLTDvDM/j8SfuUw==
   dependencies:
-    "@astrojs/compiler" "^0.25.0"
+    "@astrojs/compiler" "^0.26.0"
     "@astrojs/language-server" "^0.26.2"
     "@astrojs/markdown-remark" "^1.1.3"
     "@astrojs/telemetry" "^1.0.1"
@@ -3618,17 +3618,7 @@ tar-stream@^2.1.4:
     inherits "^2.0.3"
     readable-stream "^3.1.1"
 
-terser@5.15.0:
-  version "5.15.0"
-  resolved "https://registry.yarnpkg.com/terser/-/terser-5.15.0.tgz#e16967894eeba6e1091509ec83f0c60e179f2425"
-  integrity sha512-L1BJiXVmheAQQy+as0oF3Pwtlo4s3Wi1X2zNZ2NxOB4wx9bdS9Vk67XQENLFdLYGCK/Z2di53mTj/hBafR+dTA==
-  dependencies:
-    "@jridgewell/source-map" "^0.3.2"
-    acorn "^8.5.0"
-    commander "^2.20.0"
-    source-map-support "~0.5.20"
-
-terser@^5.14.2:
+terser@5.15.1, terser@^5.14.2:
   version "5.15.1"
   resolved "https://registry.yarnpkg.com/terser/-/terser-5.15.1.tgz#8561af6e0fd6d839669c73b92bdd5777d870ed6c"
   integrity sha512-K1faMUvpm/FBxjBXud0LWVAGxmvoPbZbfTCYbSgaaYQaIXI3/TdI7a7ZGA73Zrou6Q8Zmz3oeUTsp/dj+ag2Xw==

@@ -14,7 +14,7 @@
     "astro-compress": "^1.0.9"
   },
   "dependencies": {
-    "@astrojs/image": "^0.9.1",
+    "@astrojs/image": "^0.9.3",
     "@astrojs/sitemap": "^1.0.0",
     "sharp": ">=0.31.0"
   }

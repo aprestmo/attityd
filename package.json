@@ -10,7 +10,7 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "astro": "^1.4.5",
+    "astro": "^1.4.7",
     "astro-compress": "^1.0.11"
   }
 }

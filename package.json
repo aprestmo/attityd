@@ -10,11 +10,11 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "astro": "^1.4.4",
-    "astro-compress": "^1.0.9"
+    "astro": "^1.5.0",
+    "astro-compress": "^1.0.12"
   },
   "dependencies": {
-    "@astrojs/image": "^0.9.3",
+    "@astrojs/image": "^0.10.0",
     "@astrojs/sitemap": "^1.0.0",
     "sharp": ">=0.31.0"
   }

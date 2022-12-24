@@ -5,12 +5,6 @@
     "titleBar.activeBackground": "#5c2fa6",
     "titleBar.inactiveBackground": "#5c2fa6cc"
   },
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "editor.tabSize": 2,
-  "prettier.requireConfig": true,
   "search.exclude": {
     "**/dist": true,
   }

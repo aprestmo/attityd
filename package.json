@@ -10,12 +10,7 @@
     "astro": "astro"
   },
   "devDependencies": {
-<<<<<<< HEAD
-    "astro": "^2.0.8",
-    "astro-compress": "^1.1.31"
-=======
     "astro": "^2.0.10",
     "astro-compress": "^1.1.32"
->>>>>>> 9de283c (Update to Astro 2.0.10)
   }
 }

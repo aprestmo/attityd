@@ -11,7 +11,8 @@
   },
   "devDependencies": {
     "astro": "^2.0.13",
-    "astro-compress": "^1.1.33"
+    "astro-compress": "^1.1.33",
+    "svgo": "2.8.0"
   },
   "dependencies": {
     "@astrojs/image": "^0.15.0",

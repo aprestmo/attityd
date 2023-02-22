@@ -10,9 +10,9 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "astro": "^2.0.13",
+    "astro": "^2.0.14",
     "astro-compress": "^1.1.33",
-    "svgo": "2.8.0"
+    "svgo": "3.0.2"
   },
   "dependencies": {
     "@astrojs/image": "^0.15.0",

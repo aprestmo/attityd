@@ -1,0 +1,7 @@
+button::after {
+  --button-color: transparent;
+}
+
+[astro-icon='blob'] {
+  --blend-mode: difference;
+}

@@ -1,5 +1,7 @@
 ---
+import Layout from '../templates/Layout.astro';
 import { Icon } from 'astro-icon';
+import Text from '../atoms/Text.astro';
 import Footer from '../layouts/Footer.astro';
 ---
 
@@ -14,6 +16,16 @@ import Footer from '../layouts/Footer.astro';
     />
     <meta name="format-detection" content="telephone=no" />
     <meta name="theme-color" content="var(--brand-color)" />
+    <meta name="color-scheme" content="light dark" />
+    <link
+      rel="stylesheet"
+      href="../styles/base.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../styles/dark.css"
+      media="(prefers-color-scheme: dark)"
+    />
     <title>Attityd</title>
     <link rel="canonical" href="https://attityd.no/" />
     <link
@@ -31,271 +43,27 @@ import Footer from '../layouts/Footer.astro';
       crossorigin
     />
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
-    <style is:global>
-      @font-face {
-        font-family: 'Silka';
-        font-display: swap;
-        src: url('../fonts/silka-regular-webfont-subset.woff2');
-        font-weight: 400;
-        font-style: normal;
-      }
-
-      @font-face {
-        font-family: 'Silka';
-        font-display: swap;
-        src: url('../fonts/silka-semibold-webfont-subset.woff2');
-        font-weight: 600;
-        font-style: normal;
-      }
-      ::selection {
-        background-color: var(--brand-color);
-        color: hsla(0, 100%, 100%, 0.95);
-      }
-
-      * {
-        margin: 0;
-      }
-
-      body {
-        --brand-color: hsl(253.3, 44.7%, 49.6%);
-        align-items: center;
-        box-sizing: border-box;
-        background-color: hsl(0, 100%, 100%);
-        block-size: 100vh;
-        color: var(--brand-color);
-        display: grid;
-        font-family: 'Silka', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr auto;
-        justify-content: center;
-        margin: 0;
-        overscroll-behavior-block: none;
-        padding: 0.5rem;
-      }
-
-      @supports (-webkit-touch-callout: none) {
-        body {
-          block-size: -webkit-fill-available;
-        }
-      }
-
-      main {
-        display: grid;
-        justify-items: center;
-        margin-block-start: 1rem;
-        row-gap: 2rem;
-      }
-
-      h1 {
-        display: flex;
-      }
-
-      svg {
-        block-size: 100%;
-        inline-size: clamp(16rem, 32vmax, 24rem);
-      }
-
-      svg path {
-        fill: var(--brand-color);
-      }
-
-      p {
-        font-size: clamp(1.25rem, 5vw, 2.5rem);
-        line-height: 1.3;
-        max-inline-size: 45ch;
-        padding-inline: 5vw;
-        text-align: center;
-      }
-
-      a {
-        align-items: center;
-        color: inherit;
-        display: flex;
-        flex-direction: column;
-        font-size: clamp(1.25rem, 4vw, 2.75rem);
-        font-weight: 600;
-        justify-content: center;
-        position: relative;
-        text-align: center;
-        text-decoration: none;
-      }
-
-      a span {
-        --popup-height: 2.5rem;
-        --border-color: currentColor;
-        --button-color: hsla(0, 100%, 100%, 0);
-        align-items: center;
-        background-color: var(--button-color);
-        block-size: var(--popup-height);
-        border: 0.125rem solid var(--border-color);
-        border-radius: calc(var(--popup-height) / 2);
-        display: flex;
-        font-size: 1.25rem;
-        font-weight: 400;
-        inset-block-start: calc(var(--popup-height) * 1.5);
-        line-height: 1;
-        margin-block-start: 0.5rem;
-        opacity: 0;
-        padding: 0 1rem;
-        pointer-events: none;
-        position: absolute;
-        transform: translateY(0.5rem) scale(1);
-        transition: opacity 250ms, transform 500ms;
-        visibility: var(--state);
-        white-space: nowrap;
-        will-change: opacity, transform;
-      }
-
-      a.is-active span {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
-
-      a:active {
-        transform: scale(0.99);
-      }
-
-      a:focus {
-        outline: 0;
-      }
-
-      a:focus-visible {
-        text-decoration: underline;
-        text-decoration-thickness: 0.125rem;
-        text-underline-offset: 1rem;
-      }
-
-      @media (prefers-color-scheme: dark) {
-        a span {
-          --button-color: transparent;
-        }
-      }
-
-      @media (prefers-reduced-motion) {
-        a.is-active span {
-          transition: none;
-        }
-      }
-
-      .blob {
-        --blend-mode: multiply;
-        inline-size: clamp(18rem, 60vw, 32rem);
-        inset-block-start: 50%;
-        inset-inline-start: 50%;
-        mix-blend-mode: var(--blend-mode);
-        opacity: 0.2;
-        position: fixed;
-        transform: translate(-50%, -50%);
-        z-index: -1;
-      }
-
-      @media (prefers-color-scheme: dark) {
-        button::after {
-          --button-color: transparent;
-        }
-
-        .blob {
-          --blend-mode: difference;
-        }
-      }
-    </style>
   </head>
   <body>
-    <main>
+    <Layout>
       <h1>
         <Icon name="attityd" />
       </h1>
 
-      <p>
+      <Text>
         Frilans design studio som leverer estetiske og funksjonelle løsninger.
         Ta kontakt om du har et prosjekt du vil snakke om.
-      </p>
+      </Text>
 
       <a href="mailto:hei@attityd.no">hei@attityd.no</a>
 
-      <svg
-        aria-hidden="true"
-        class="blob"
-        focusable="false"
-        viewBox="0 0 200 150"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M191.702 42.67c14.741 30.655 10.051 82.752-15.747 100.174-25.964 17.421-72.701.167-112.068-28.143C24.521 86.391-7.139 46.69 1.404 24.745 9.947 2.633 59.029-1.89 100.74.623c41.711 2.345 76.052 11.558 90.961 42.046z"
-        ></path>
-      </svg>
-    </main>
+      <Icon name="blob" />
+    </Layout>
 
     <Footer />
 
-    <script type="module">
-      const offset = 79;
-      const opacity = 0.33;
-      const colors = [
-        `hsla(${offset * 1}, 92%, 70%, ${opacity})`,
-        `hsla(${offset * 2}, 92%, 70%, ${opacity})`,
-        `hsla(${offset * 3}, 92%, 70%, ${opacity})`,
-        `hsla(${offset * 4}, 92%, 70%, ${opacity})`,
-        `hsla(${offset * 5}, 92%, 70%, ${opacity})`,
-      ];
-
-      function setBgColor() {
-        const mqDark = window.matchMedia('(prefers-color-scheme: dark)');
-        const color = colors[Math.floor(Math.random() * colors.length)];
-
-        if (mqDark.matches) {
-          document.body.style.backgroundColor = 'hsl(0, 0%, 0%)';
-        } else {
-          document.body.style.backgroundColor = color;
-        }
-      }
-
-      setBgColor();
-
-      const linkTag = document.querySelector('a');
-      linkTag.style.setProperty('--state', 'hidden');
-
-      linkTag.addEventListener('click', async (event) => {
-        event.preventDefault();
-        event.currentTarget.insertAdjacentHTML(
-          'beforeend',
-          '<span>Kopiert til utklippstavlen</span>'
-        );
-
-        if (!navigator.clipboard) {
-          return;
-        }
-
-        const text = event.currentTarget.innerText;
-
-        try {
-          await navigator.clipboard.writeText(text);
-          event.target.classList.add('is-active');
-          event.target.style.setProperty('--state', 'visible');
-          setTimeout(() => {
-            event.target.classList.remove('is-active');
-            event.target.firstElementChild.remove();
-            setTimeout(() => {
-              event.target.style.setProperty('--state', 'hidden');
-            }, 1000);
-          }, 30000);
-        } catch (err) {
-          console.error('Kunne ikke kopiere!', err);
-        }
-      });
-
-      const blob = document.querySelector('.blob');
-      let cursor = {
-        x: 0,
-        y: 0,
-      };
-
-      document.addEventListener('mousemove', (e) => {
-        cursor.x = -e.clientX * 0.05;
-        cursor.y = e.clientY * 0.05;
-
-        blob.style.transform = `translate(calc(-50% + ${cursor.x}px), calc(-50% + ${cursor.y}px))`;
-      });
+    <script>
+      import '../js/app';
     </script>
   </body>
 </html>

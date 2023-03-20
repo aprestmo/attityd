@@ -2,6 +2,8 @@
 import Layout from '../templates/Layout.astro';
 import { Icon } from 'astro-icon';
 import Text from '../atoms/Text.astro';
+import MailTo from '../atoms/MailTo.astro';
+import Blob from '../organisms/Blob.astro';
 import Footer from '../organisms/Footer.astro';
 ---
 
@@ -17,10 +19,7 @@ import Footer from '../organisms/Footer.astro';
     <meta name="format-detection" content="telephone=no" />
     <meta name="theme-color" content="var(--brand-color)" />
     <meta name="color-scheme" content="light dark" />
-    <link
-      rel="stylesheet"
-      href="../styles/base.css"
-    />
+    <link rel="stylesheet" href="../styles/base.css" />
     <link
       rel="stylesheet"
       href="../styles/dark.css"
@@ -55,15 +54,11 @@ import Footer from '../organisms/Footer.astro';
         Ta kontakt om du har et prosjekt du vil snakke om.
       </Text>
 
-      <a href="mailto:hei@attityd.no">hei@attityd.no</a>
+      <MailTo email="hei@attityd.no" />
 
-      <Icon name="blob" />
+      <Blob />
     </Layout>
 
     <Footer />
-
-    <script>
-      import '../js/app';
-    </script>
   </body>
 </html>

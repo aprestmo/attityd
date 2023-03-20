@@ -10,3 +10,28 @@
     row-gap: 2rem;
   }
 </style>
+
+<script>
+  const offset = 79;
+  const opacity = 0.33;
+  const colors = [
+    `hsla(${offset * 1}, 92%, 70%, ${opacity})`,
+    `hsla(${offset * 2}, 92%, 70%, ${opacity})`,
+    `hsla(${offset * 3}, 92%, 70%, ${opacity})`,
+    `hsla(${offset * 4}, 92%, 70%, ${opacity})`,
+    `hsla(${offset * 5}, 92%, 70%, ${opacity})`,
+  ];
+
+  function setBgColor() {
+    const mqDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const color = colors[Math.floor(Math.random() * colors.length)];
+
+    if (mqDark.matches) {
+      document.body.style.backgroundColor = 'hsl(0, 0%, 0%)';
+    } else {
+      document.body.style.backgroundColor = color;
+    }
+  }
+
+  setBgColor();
+</script>

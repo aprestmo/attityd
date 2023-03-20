@@ -1,0 +1,43 @@
+---
+interface Props {
+  email: string,
+}
+
+const { email } = Astro.props as Props;
+---
+
+<a href="mailto:{email}">{email}</a>
+
+<script>
+  const linkTag = document.querySelector('a');
+  linkTag.style.setProperty('--state', 'hidden');
+
+  linkTag.addEventListener('click', async (event) => {
+    event.preventDefault();
+    event.currentTarget.insertAdjacentHTML(
+      'beforeend',
+      '<span>Kopiert til utklippstavlen</span>'
+    );
+
+    if (!navigator.clipboard) {
+      return;
+    }
+
+    const text = event.currentTarget.innerText;
+
+    try {
+      await navigator.clipboard.writeText(text);
+      event.target.classList.add('is-active');
+      event.target.style.setProperty('--state', 'visible');
+      setTimeout(() => {
+        event.target.classList.remove('is-active');
+        event.target.firstElementChild.remove();
+        setTimeout(() => {
+          event.target.style.setProperty('--state', 'hidden');
+        }, 1000);
+      }, 30000);
+    } catch (err) {
+      console.error('Kunne ikke kopiere!', err);
+    }
+  });
+</script>

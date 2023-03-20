@@ -1,9 +1,10 @@
 ---
 import Layout from '../templates/Layout.astro';
 import { Icon } from 'astro-icon';
+import SiteTitle from '../atoms/SiteTitle.astro';
 import Text from '../atoms/Text.astro';
 import MailTo from '../atoms/MailTo.astro';
-import Blob from '../organisms/Blob.astro';
+import Blob from '../molecules/Blob.astro';
 import Footer from '../organisms/Footer.astro';
 ---
 
@@ -41,13 +42,16 @@ import Footer from '../organisms/Footer.astro';
       href="fonts/silka-semibold-webfont-subset.woff2"
       crossorigin
     />
-    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <link rel="icon" href="/favicon.ico" sizes="any"><!-- 32×32 -->
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png"><!-- 180×180 -->
+    <link rel="manifest" href="/manifest.webmanifest">
   </head>
   <body>
     <Layout>
-      <h1>
+      <SiteTitle>
         <Icon name="attityd" />
-      </h1>
+      </SiteTitle>
 
       <Text>
         Frilans design studio som leverer estetiske og funksjonelle løsninger.

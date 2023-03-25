@@ -20,10 +20,10 @@
   resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-0.31.4.tgz#fa5aaeb3e6f3640f6f7625849b724a4d28d662e4"
   integrity sha512-6bBFeDTtPOn4jZaiD3p0f05MEGQL9pw2Zbfj546oFETNmjJFWO3nzHz6/m+P53calknCvyVzZ5YhoBLIvzn5iw==
 
-"@astrojs/compiler@^1.2.0":
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-1.2.2.tgz#79a0e5085c1e8f4b3d794ba6a20a1823d8554133"
-  integrity sha512-S5UfaoYPgdKjxXjHq9jwHfNJJYZq77WRGgT6bQRmccGI/3dC/TakDW2nITNhju6kvRK1I8GI7ZHFJnVfA9cyhg==
+"@astrojs/compiler@^1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-1.3.0.tgz#06888a575aff60566c0151e6302f76deadce5d33"
+  integrity sha512-VxSj3gh/UTB/27rkRCT7SvyGjWtuxUO7Jf7QqDduch7j/gr/uA5P/Q5I/4zIIrZjy2yQAKyKLoox2QI2mM/BSA==
 
 "@astrojs/image@^0.16.2":
   version "0.16.2"
@@ -848,12 +848,12 @@ astro-rome@^0.1.11:
     files-pipe "0.0.1"
     rome "11.0.0"
 
-astro@2.1.6:
-  version "2.1.6"
-  resolved "https://registry.yarnpkg.com/astro/-/astro-2.1.6.tgz#367fad92e11ab6b02e3c313b6f71faa25c91f762"
-  integrity sha512-CQg5WsQhjx28/BWnrBN9doZSK/2OWF+VJlierkEnRSYeiSrhUfsCW33RBKtrBPEHp5pHWTlAU6pQkJ4FQht0Sw==
+astro@2.1.7:
+  version "2.1.7"
+  resolved "https://registry.yarnpkg.com/astro/-/astro-2.1.7.tgz#d28f1b3529595c75bdc73c58b1a5f89aeb8f70fa"
+  integrity sha512-Eaq8/mJTx+kbghfW5ZEJ8rKiEduo03Rn6R/fp/gJGpBSRm/0FiVxVsrpq5SV4kUPrttEi1zMEnEc2GP6JWfXeg==
   dependencies:
-    "@astrojs/compiler" "^1.2.0"
+    "@astrojs/compiler" "^1.3.0"
     "@astrojs/language-server" "^0.28.3"
     "@astrojs/markdown-remark" "^2.1.2"
     "@astrojs/telemetry" "^2.1.0"
@@ -2599,6 +2599,11 @@ node-addon-api@^5.0.0:
   resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-5.1.0.tgz#49da1ca055e109a23d537e9de43c09cca21eb762"
   integrity sha512-eh0GgfEkpnoWDq+VY8OyvYhFEzBk6jIYbRKdIlyTiAXIVJ8PyBaKb0rp7oDtoddbdoHWhq8wwr+XZ81F1rpNdA==
 
+node-addon-api@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-6.0.0.tgz#cfb3574e6df708ff71a30db6c4762d9e06e11c27"
+  integrity sha512-GyHvgPvUXBvAkXa0YvYnhilSB1A+FRYMpIVggKzPZqdaZfevZOuzfWzyvgzOwRLHBeo/MMswmJFsrNF4Nw1pmA==
+
 node-domexception@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/node-domexception/-/node-domexception-1.0.0.tgz#6888db46a1f71c0b76b3f7555016b63fe64766e5"
@@ -3142,7 +3147,7 @@ server-destroy@^1.0.1:
   resolved "https://registry.yarnpkg.com/server-destroy/-/server-destroy-1.0.1.tgz#f13bf928e42b9c3e79383e61cc3998b5d14e6cdd"
   integrity sha512-rb+9B5YBIEzYcD6x2VKidaa+cqYBJQKnU4oe4E3ANwRRN56yk/ua1YCJT1n21NTS8w6CcOclAKNP3PhdCXKYtQ==
 
-sharp@0.31.3, sharp@>=0.31.3:
+sharp@0.31.3:
   version "0.31.3"
   resolved "https://registry.yarnpkg.com/sharp/-/sharp-0.31.3.tgz#60227edc5c2be90e7378a210466c99aefcf32688"
   integrity sha512-XcR4+FCLBFKw1bdB+GEhnUNXNXvnt0tDo4WsBsraKymuo/IAuPuCBVAL2wIkUw2r/dwFW5Q5+g66Kwl2dgDFVg==
@@ -3150,6 +3155,20 @@ sharp@0.31.3, sharp@>=0.31.3:
     color "^4.2.3"
     detect-libc "^2.0.1"
     node-addon-api "^5.0.0"
+    prebuild-install "^7.1.1"
+    semver "^7.3.8"
+    simple-get "^4.0.1"
+    tar-fs "^2.1.1"
+    tunnel-agent "^0.6.0"
+
+sharp@>=0.32.0:
+  version "0.32.0"
+  resolved "https://registry.yarnpkg.com/sharp/-/sharp-0.32.0.tgz#146b3e1930d56518699908d9116d8a03be1f5cf6"
+  integrity sha512-yLAypVcqj1toSAqRSwbs86nEzfyZVDYqjuUX8grhFpeij0DDNagKJXELS/auegDBRDg1XBtELdOGfo2X1cCpeA==
+  dependencies:
+    color "^4.2.3"
+    detect-libc "^2.0.1"
+    node-addon-api "^6.0.0"
     prebuild-install "^7.1.1"
     semver "^7.3.8"
     simple-get "^4.0.1"

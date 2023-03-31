@@ -10,12 +10,12 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "astro": "2.1.7",
+    "astro": "2.1.8",
     "astro-compress": "^1.1.35",
     "svgo": "3.0.2"
   },
   "dependencies": {
-    "@astrojs/image": "^0.16.2",
+    "@astrojs/image": "^0.16.3",
     "@astrojs/sitemap": "^1.2.1",
     "astro-icon": "^0.8.0",
     "astro-rome": "^0.1.11",

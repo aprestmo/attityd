@@ -1,8 +1,7 @@
-import { defineConfig } from 'astro/config';
-
-import compress from "astro-compress";
+import { defineConfig } from "astro/config";
+import rome from "astro-rome";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [compress()]
+	integrations: [rome()],
 });

@@ -5,16 +5,18 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "astro build && jampack ./dist",
     "preview": "astro preview",
     "astro": "astro"
   },
   "devDependencies": {
+    "@divriots/jampack": "^0.9.4",
     "astro": "2.2.2",
-    "astro-compress": "1.1.35",
+    "rome": "12.0.0",
     "svgo": "2.8.0"
   },
   "dependencies": {
-    "astro-icon": "0.8.0"
+    "astro-icon": "0.8.0",
+    "astro-rome": "^0.1.11"
   }
 }

@@ -10,14 +10,14 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "astro": "2.3.0",
+    "astro": "2.3.2",
     "rome": "12.0.0",
-    "style-dictionary": "^3.7.2",
+    "style-dictionary": "^3.8.0",
     "svgo": "2.8.0",
     "vite-plugin-lightningcss": "^0.0.5"
   },
   "dependencies": {
     "astro-icon": "0.8.0",
-    "astro-rome": "^0.1.11"
+    "astro-rome": "^0.1.15"
   }
 }

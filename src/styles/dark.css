@@ -1,0 +1,17 @@
+button::after {
+  --button-color: transparent;
+}
+
+[astro-icon='blob'] {
+  --blend-mode: difference;
+}
+
+.martian {
+  background:   oklch(69.73% 0.155 112.79);
+}
+@media (color-gamut: p3) {
+  .martian {
+    background:   oklch(69.73% 0.176 112.79);
+    /* You'll only see the preview with P3 monitors */
+  }
+}

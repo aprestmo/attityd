@@ -15,6 +15,11 @@
   resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-1.4.2.tgz#6480154a933acd4c79ccd703567ac5fe4a3a96a3"
   integrity sha512-xoRp7JpiMZPK/beUcZEM5kM44Z/h20wwwQcl54duPqQMyySG9vZ5xMM6dYiQmn7b3XzpZs0cT6TRDoJJ5gwHAQ==
 
+"@astrojs/internal-helpers@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@astrojs/internal-helpers/-/internal-helpers-0.1.0.tgz#2698f92cbc29f04d2f9df1f1fde6e40072fa5303"
+  integrity sha512-OSwvoFkTqVowiyP+codQeQZWoq/HOwY32x17NxDglWoCx2sdyXzplDZoVV4/3odmSEY6/A+48WMl5qkjmP1CXw==
+
 "@astrojs/language-server@^1.0.0":
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/@astrojs/language-server/-/language-server-1.0.5.tgz#755b4d7a6b11553a56d5383cfbb588d3a56b7d51"
@@ -690,72 +695,42 @@
     tiny-glob "^0.2.9"
     tslib "^2.4.0"
 
-"@rometools/backend-jsonrpc@12.1.2":
-  version "12.1.2"
-  resolved "https://registry.yarnpkg.com/@rometools/backend-jsonrpc/-/backend-jsonrpc-12.1.2.tgz#a11ef7c6eba764162f2ad9c1c6196f145f9f5818"
-  integrity sha512-iCKl4y6DSoflQnk1L1Nz2C/dOBZkVtEMBQ9O+5g/LkLpmPYDEZmlssLRgQ+DrLLJ8tcvEsSdCfsbB0/KNsz5zw==
+"@rometools/backend-jsonrpc@12.1.3":
+  version "12.1.3"
+  resolved "https://registry.yarnpkg.com/@rometools/backend-jsonrpc/-/backend-jsonrpc-12.1.3.tgz#cb24b5ee4e6b6a68363b9e6c9d3c7046729ecf14"
+  integrity sha512-hCLbAKvq52nNLjrp4FZZREdNVgrsgMLvYaLda2u7KaA5UFN9sGhgvX+inLEwWm3k1iOK1YKqNJXCdfNCYjrjEA==
   optionalDependencies:
-    "@rometools/cli-darwin-arm64" "12.1.2"
-    "@rometools/cli-darwin-x64" "12.1.2"
-    "@rometools/cli-linux-arm64" "12.1.2"
-    "@rometools/cli-linux-x64" "12.1.2"
-    "@rometools/cli-win32-arm64" "12.1.2"
-    "@rometools/cli-win32-x64" "12.1.2"
-
-"@rometools/cli-darwin-arm64@12.1.2":
-  version "12.1.2"
-  resolved "https://registry.yarnpkg.com/@rometools/cli-darwin-arm64/-/cli-darwin-arm64-12.1.2.tgz#e08b29f6fbfc84dce00bb3c3c9e26ab25b1bc1d0"
-  integrity sha512-9QxtAwNyX9n7ysxo+9qWczl70I1opulmX7LFNsRJKS9qqyTNc5K++btnNK07vWAIeQsMx4QYwr7241thuBMlFw==
+    "@rometools/cli-darwin-arm64" "12.1.3"
+    "@rometools/cli-darwin-x64" "12.1.3"
+    "@rometools/cli-linux-arm64" "12.1.3"
+    "@rometools/cli-linux-x64" "12.1.3"
+    "@rometools/cli-win32-arm64" "12.1.3"
+    "@rometools/cli-win32-x64" "12.1.3"
 
 "@rometools/cli-darwin-arm64@12.1.3":
   version "12.1.3"
   resolved "https://registry.yarnpkg.com/@rometools/cli-darwin-arm64/-/cli-darwin-arm64-12.1.3.tgz#b00fe225e34047c4dac63588e237b11ebec47694"
   integrity sha512-AmFTUDYjBuEGQp/Wwps+2cqUr+qhR7gyXAUnkL5psCuNCz3807TrUq/ecOoct5MIavGJTH6R4aaSL6+f+VlBEg==
 
-"@rometools/cli-darwin-x64@12.1.2":
-  version "12.1.2"
-  resolved "https://registry.yarnpkg.com/@rometools/cli-darwin-x64/-/cli-darwin-x64-12.1.2.tgz#900e5a12a754f5872b99abd6baae7b184ab0526f"
-  integrity sha512-w28NkGYK/rSmQU2WkNzw1h7ec8IR5a7LzYwPHDvG2ogY5sTcygkg0TGKOF/MHUvixU6EBPrFobua2gPhpr/m5A==
-
 "@rometools/cli-darwin-x64@12.1.3":
   version "12.1.3"
   resolved "https://registry.yarnpkg.com/@rometools/cli-darwin-x64/-/cli-darwin-x64-12.1.3.tgz#e5bbf02afb1aab7447e743092245dea992b4b29f"
   integrity sha512-k8MbWna8q4LRlb005N2X+JS1UQ+s3ZLBBvwk4fP8TBxlAJXUz17jLLu/Fi+7DTTEmMhM84TWj4FDKW+rNar28g==
-
-"@rometools/cli-linux-arm64@12.1.2":
-  version "12.1.2"
-  resolved "https://registry.yarnpkg.com/@rometools/cli-linux-arm64/-/cli-linux-arm64-12.1.2.tgz#3d81d8b1f6e87d04a99a0d54ccf14a3ecf69053c"
-  integrity sha512-7BPGqPtnJy1O8B/ucJ5Vg+p6EUvJJ9DazrT1UEdVR/4inPqAVac9PIZDjjHXyMrt/3IngnetPyn5EXNTAqpJVw==
 
 "@rometools/cli-linux-arm64@12.1.3":
   version "12.1.3"
   resolved "https://registry.yarnpkg.com/@rometools/cli-linux-arm64/-/cli-linux-arm64-12.1.3.tgz#e75b01b74c134edc811e21fa7e1e440602930d59"
   integrity sha512-X/uLhJ2/FNA3nu5TiyeNPqiD3OZoFfNfRvw6a3ut0jEREPvEn72NI7WPijH/gxSz55znfQ7UQ6iM4DZumUknJg==
 
-"@rometools/cli-linux-x64@12.1.2":
-  version "12.1.2"
-  resolved "https://registry.yarnpkg.com/@rometools/cli-linux-x64/-/cli-linux-x64-12.1.2.tgz#166d49f12872942b8ead7d484a29745e99d3efea"
-  integrity sha512-qH2iJKPLp34D0GFK1gLolHGkTA8q2vGKh2Ae1AwoTh87g0mXyyeQf4mAtxJtf4/ydMgjEkAZdEwyaevbTX8gnQ==
-
 "@rometools/cli-linux-x64@12.1.3":
   version "12.1.3"
   resolved "https://registry.yarnpkg.com/@rometools/cli-linux-x64/-/cli-linux-x64-12.1.3.tgz#2b9f4a68079783f275d4d27df83e4fa2220ec6fc"
   integrity sha512-csP17q1eWiUXx9z6Jr/JJPibkplyKIwiWPYNzvPCGE8pHlKhwZj3YHRuu7Dm/4EOqx0XFIuqqWZUYm9bkIC8xg==
 
-"@rometools/cli-win32-arm64@12.1.2":
-  version "12.1.2"
-  resolved "https://registry.yarnpkg.com/@rometools/cli-win32-arm64/-/cli-win32-arm64-12.1.2.tgz#09ecdde94a38b1e133b2e8c1393d6a891323dfc7"
-  integrity sha512-iIdqss2R8bni7C7isA9OLBj1UAA3MeKfca0aHNZr+2gSRdiSxO/47j6s3Tpebso99xsJBAFdWBOruG+l/C+LQg==
-
 "@rometools/cli-win32-arm64@12.1.3":
   version "12.1.3"
   resolved "https://registry.yarnpkg.com/@rometools/cli-win32-arm64/-/cli-win32-arm64-12.1.3.tgz#714acb67ac4ea4c15e2bc6aea4dd290c76c8efc6"
   integrity sha512-RymHWeod57EBOJY4P636CgUwYA6BQdkQjh56XKk4pLEHO6X1bFyMet2XL7KlHw5qOTalzuzf5jJqUs+vf3jdXQ==
-
-"@rometools/cli-win32-x64@12.1.2":
-  version "12.1.2"
-  resolved "https://registry.yarnpkg.com/@rometools/cli-win32-x64/-/cli-win32-x64-12.1.2.tgz#cd8d547da3c446caeb099423375d71ed1bcf213a"
-  integrity sha512-MKOd02sSnd/Biogh3rIKpLFZzYbDSVvRNAxbFHJOpyGLbeQHfAg7QxjKwz0PqyrHVjZaTEEPlswrf4IFii0GNg==
 
 "@rometools/cli-win32-x64@12.1.3":
   version "12.1.3"
@@ -767,10 +742,10 @@
   resolved "https://registry.yarnpkg.com/@rometools/js-api/-/js-api-0.3.0.tgz#4d0c3a08933403c782203634a2e711be66b9dfa3"
   integrity sha512-X5NmAH9aZfuT9FVuQZNRHCFyqae/lT7YLpPPZpffQZ+Z0LwaXAyqbrim+orWQMKXC+4wUmJgCii3hBNamKW2Lg==
 
-"@rometools/wasm-nodejs@12.1.2":
-  version "12.1.2"
-  resolved "https://registry.yarnpkg.com/@rometools/wasm-nodejs/-/wasm-nodejs-12.1.2.tgz#9239cf11d188bf022b3f91819ed0f6ff9be2f77d"
-  integrity sha512-59HkRpZzi+0E50chYLCqoBxs5Whr3Bc+MetavrlMky0EKoq1BpMiXM+cImkUPz5Y+BIrkihT9zepHr35Z46OCQ==
+"@rometools/wasm-nodejs@12.1.3":
+  version "12.1.3"
+  resolved "https://registry.yarnpkg.com/@rometools/wasm-nodejs/-/wasm-nodejs-12.1.3.tgz#6857ad778fd53400b5b53265935626a12b055ac4"
+  integrity sha512-qdrqjBxJcOMmkGq7mSdGYjxqEJ2TNbITIRl4gCGm1K2zv1qzEu57QjfHOL6NyRMlfhA1yxbda/NY48WsBxr6ZQ==
 
 "@trysound/sax@0.2.0":
   version "0.2.0"
@@ -960,33 +935,34 @@ array-iterate@^2.0.0:
   resolved "https://registry.yarnpkg.com/array-iterate/-/array-iterate-2.0.1.tgz#6efd43f8295b3fee06251d3d62ead4bd9805dd24"
   integrity sha512-I1jXZMjAgCMmxT4qxXfPXa6SthSoE8h6gkSI9BGGNv8mP8G/v0blc+qFnZu6K42vTOiuME596QaLO0TP3Lk0xg==
 
-astro-icon@0.8.0:
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/astro-icon/-/astro-icon-0.8.0.tgz#f5fb224b094e457f76ff6bf72d8e01dbfed6b180"
-  integrity sha512-sCzhZcl46BIyLJVg89hq5J4uQABn2psmGvK4cUaxib+M/kBI3TrPy1w3g2O5h/WcrTHLVN9LyxjgkD4lEJJFpw==
+astro-icon@0.8.1:
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/astro-icon/-/astro-icon-0.8.1.tgz#2259640cea3818326957dfba66ae17aa43f1d3cb"
+  integrity sha512-APk+fbFnoyGdIVSPFrdrOW9YBK96/1fYuVe7ULTGW92+z00RKB8GfLJiUvzNVXUAX2rZJCFmruGVF4rrhcTYsg==
   dependencies:
     node-fetch "^3.1.0"
     resolve-pkg "^2.0.0"
     svgo "^2.8.0"
 
-astro-rome@^0.1.16:
-  version "0.1.16"
-  resolved "https://registry.yarnpkg.com/astro-rome/-/astro-rome-0.1.16.tgz#d998701d00b87dd8beaef9708fb20263dcfc78e2"
-  integrity sha512-Sh9cy+2aJSSYYe4KxNZ7QWszoyd3ZAylmEAbob0rF4zoO18Y6A4mHuw+zVfBNV97hpEuJFigKYCvEmtrKY8qng==
+astro-rome@^0.1.17:
+  version "0.1.17"
+  resolved "https://registry.yarnpkg.com/astro-rome/-/astro-rome-0.1.17.tgz#6bd86e929acd79eceb571c331552fd4423f51ed6"
+  integrity sha512-tQQqpR0hGWwGQFNXQ5RDF7cw4O3Tq/p8/Sq7hndUjRTg1lAop66/AGHUWC3lDPIHhBDJo3JVnfurkrRkvQpWPg==
   dependencies:
-    "@rometools/backend-jsonrpc" "12.1.2"
+    "@rometools/backend-jsonrpc" "12.1.3"
     "@rometools/js-api" "0.3.0"
-    "@rometools/wasm-nodejs" "12.1.2"
+    "@rometools/wasm-nodejs" "12.1.3"
     deepmerge-ts "5.1.0"
-    files-pipe "0.0.6"
-    rome "12.1.2"
+    files-pipe "0.0.7"
+    rome "12.1.3"
 
-astro@2.5.6:
-  version "2.5.6"
-  resolved "https://registry.yarnpkg.com/astro/-/astro-2.5.6.tgz#e90cdcc6aeac4d5524c877d86991d2837b1b8df8"
-  integrity sha512-IdgEnjP8kqLEYgNbWcrRyqR4tUq1iEXI3AZ5RqV9PTaDd4l9H+UmN0oDjrzG8VTmCdpfSHGlQEr+0qkGPoIiOw==
+astro@2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/astro/-/astro-2.6.0.tgz#b38bc20354b17223c8d3d539fdd00b1f0794b8b0"
+  integrity sha512-Y//Gfy/DB43qIT6aB/0nuB0KyCj/JcLIWW8OTxfMEDyq3hGoensCD8SdWCyjcrKRVE3C9ntkszJ5RyLZh3Fg0g==
   dependencies:
     "@astrojs/compiler" "^1.4.0"
+    "@astrojs/internal-helpers" "^0.1.0"
     "@astrojs/language-server" "^1.0.0"
     "@astrojs/markdown-remark" "^2.2.1"
     "@astrojs/telemetry" "^2.1.1"
@@ -1654,10 +1630,10 @@ fetch-blob@^3.1.2, fetch-blob@^3.1.4:
     node-domexception "^1.0.0"
     web-streams-polyfill "^3.0.3"
 
-files-pipe@0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/files-pipe/-/files-pipe-0.0.6.tgz#dbbf7a4243c679ecfddfb522b0c7762ec1503cab"
-  integrity sha512-izHIHcqKEM0V2nw3FvzAqL0nx3IiZ2RC7k4eczIhlJ4X5JWJsxVl4c6b+Uid3zvNd6RiPxjFerbFcodFXMPHBw==
+files-pipe@0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/files-pipe/-/files-pipe-0.0.7.tgz#84b5efd0432be3ffa6e89324666e461ab1e40669"
+  integrity sha512-BkXQoAEo1X3RqmEucIBLL1ddc/LM3lqsf5ipIf/bRrUTn3SQZWhThgpIl1/ma2VNesB2hBoY+CB0rrZ3b1tQhA==
   dependencies:
     deepmerge-ts "5.1.0"
     fast-glob "3.2.12"
@@ -3157,18 +3133,6 @@ rollup@^3.21.0:
   integrity sha512-GpUgqWCw56OSiBKf7lcAITstYiBV1/EKaKYPl9r8HgAxc6/qYAVw1PaHWnvHWFziRaf4HsVCDLq/IGtBi1K/Zw==
   optionalDependencies:
     fsevents "~2.3.2"
-
-rome@12.1.2:
-  version "12.1.2"
-  resolved "https://registry.yarnpkg.com/rome/-/rome-12.1.2.tgz#15d35b5a5abfce698b595913b71f26ef47a2a0c1"
-  integrity sha512-ObyDevKRU6k3R9fAK9hDvrX9FSPEJ0JWNv5i65enknV+epWjEIL0jnDuijPUX7MSVS6M/ngTiKUaeF3w63SJXw==
-  optionalDependencies:
-    "@rometools/cli-darwin-arm64" "12.1.2"
-    "@rometools/cli-darwin-x64" "12.1.2"
-    "@rometools/cli-linux-arm64" "12.1.2"
-    "@rometools/cli-linux-x64" "12.1.2"
-    "@rometools/cli-win32-arm64" "12.1.2"
-    "@rometools/cli-win32-x64" "12.1.2"
 
 rome@12.1.3:
   version "12.1.3"

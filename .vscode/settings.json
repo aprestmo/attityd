@@ -6,6 +6,10 @@
     "titleBar.inactiveBackground": "#5c2fa6cc"
   },
   "editor.defaultFormatter": "rome.rome",
+  "prettier.documentSelectors": ["**/*.astro"],
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "search.exclude": {
     "**/dist": true,
   }

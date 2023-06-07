@@ -1,0 +1,20 @@
+---
+import { Icon } from 'astro-icon';
+---
+
+<Icon name="blob" />
+
+<script>
+  const blob = document.querySelector('[astro-icon="blob"]');
+  let cursor = {
+    x: 0,
+    y: 0,
+  };
+
+  document.addEventListener('mousemove', (e) => {
+    cursor.x = -e.clientX * 0.05;
+    cursor.y = e.clientY * 0.05;
+
+    blob.style.transform = `translate(calc(-50% + ${cursor.x}px), calc(-50% + ${cursor.y}px))`;
+  });
+</script>

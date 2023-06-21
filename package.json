@@ -10,7 +10,7 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "astro": "2.6.5",
+    "astro": "2.6.6",
     "astro-compress": "^1.1.47",
     "svgo": "3.0.2"
   },

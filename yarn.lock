@@ -907,10 +907,10 @@ astro-rome@^0.1.18:
     files-pipe "0.0.7"
     rome "12.1.3"
 
-astro@2.7.3:
-  version "2.7.3"
-  resolved "https://registry.yarnpkg.com/astro/-/astro-2.7.3.tgz#732f3c6238807bc247b9f0acc450ee59f13dd629"
-  integrity sha512-DwPvvOYElhCNyAWUlFd17HhTNBx+XXnAZfM/PYHq7RicvC/tG4loBjlYk/Yw7x9wQCkbKjoxVRiNYvmvSUmisw==
+astro@2.8.0:
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/astro/-/astro-2.8.0.tgz#939c53dc4aa2755030b2cb4fe3a2d69b3ad1a33b"
+  integrity sha512-bqdhE9039dzi0mqaWGO9rMk5HKxTn5TckxFmRPUdsV1qmbpghXtwuERHblfJu5etQofV6WVEyTrouG+BLRkqfA==
   dependencies:
     "@astrojs/compiler" "^1.5.3"
     "@astrojs/internal-helpers" "^0.1.1"
@@ -965,6 +965,7 @@ astro@2.7.3:
     vfile "^5.3.7"
     vite "^4.3.9"
     vitefu "^0.2.4"
+    which-pm "^2.0.0"
     yargs-parser "^21.1.1"
     zod "^3.20.6"
 
@@ -3700,7 +3701,7 @@ which-pm-runs@^1.1.0:
   resolved "https://registry.yarnpkg.com/which-pm-runs/-/which-pm-runs-1.1.0.tgz#35ccf7b1a0fce87bd8b92a478c9d045785d3bf35"
   integrity sha512-n1brCuqClxfFfq/Rb0ICg9giSZqCS+pLtccdag6C2HyufBrh3fBOiy9nb6ggRMvWOVH5GrdJskj5iGTZNxd7SA==
 
-which-pm@2.0.0:
+which-pm@2.0.0, which-pm@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/which-pm/-/which-pm-2.0.0.tgz#8245609ecfe64bf751d0eef2f376d83bf1ddb7ae"
   integrity sha512-Lhs9Pmyph0p5n5Z3mVnN0yWcbQYUAD7rbQUiMsQxOJ3T57k7RFe35SUwWMf7dsbDZks1uOmw4AecB/JMDj3v/w==

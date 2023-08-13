@@ -1,5 +1,4 @@
 import { defineConfig } from "astro/config";
-import rome from "astro-rome";
 import lightningcss from "vite-plugin-lightningcss";
 
 // https://astro.build/config

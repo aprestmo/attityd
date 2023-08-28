@@ -10,12 +10,12 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "astro": "2.10.1",
+    "astro": "2.10.14",
     "svgo": "3.0.2"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^2.0.1",
+    "@astrojs/sitemap": "^2.0.2",
     "astro-icon": "^0.8.1",
-    "sharp": ">=0.32.4"
+    "sharp": ">=0.32.5"
   }
 }

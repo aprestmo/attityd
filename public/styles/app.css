@@ -127,15 +127,3 @@ a:focus-visible {
     transition: none;
   }
 }
-
-[astro-icon='blob'] {
-  --blend-mode: multiply;
-  inline-size: clamp(18rem, 60vw, 32rem);
-  inset-block-start: 50%;
-  inset-inline-start: 50%;
-  mix-blend-mode: var(--blend-mode);
-  opacity: 0.2;
-  position: fixed;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-}

@@ -3,7 +3,6 @@ import lightningcss from "vite-plugin-lightningcss";
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [],
   vite: {
     plugins: [
       lightningcss({

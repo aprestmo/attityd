@@ -11,18 +11,24 @@
 </svg>
 
 <script>
-  const blob = document.querySelector('.blob');
+  const blob: HTMLElement | null = document.querySelector(".blob");
   let cursor = {
     x: 0,
     y: 0,
   };
 
-  document.addEventListener('mousemove', (e) => {
-    cursor.x = -e.clientX * 0.05;
-    cursor.y = e.clientY * 0.05;
+  if (blob !== null) {
+    document.addEventListener("mousemove", (e: MouseEvent) => {
+      cursor.x = -e.clientX * 0.05;
+      cursor.y = e.clientY * 0.05;
 
-    blob.style.transform = `translate(calc(-50% + ${cursor.x}px), calc(-50% + ${cursor.y}px))`;
-  });
+      if (blob.style) {
+        blob.style.transform = `translate(calc(-50% + ${cursor.x}px), calc(-50% + ${cursor.y}px))`;
+      }
+    });
+  } else {
+    console.error("Blob element not found!");
+  }
 </script>
 
 <style>

@@ -1,6 +1,6 @@
 ---
 interface Props {
-  email: string,
+  email: string;
 }
 
 const { email } = Astro.props as Props;
@@ -9,35 +9,44 @@ const { email } = Astro.props as Props;
 <a href="mailto:{email}">{email}</a>
 
 <script>
-  const linkTag = document.querySelector('a');
-  linkTag.style.setProperty('--state', 'hidden');
+  const linkTag: HTMLAnchorElement | null = document.querySelector("a");
 
-  linkTag.addEventListener('click', async (event) => {
-    event.preventDefault();
-    event.currentTarget.insertAdjacentHTML(
-      'beforeend',
-      '<span>Kopiert til utklippstavlen</span>'
-    );
+  if (linkTag !== null) {
+    linkTag.style.setProperty("--state", "hidden");
 
-    if (!navigator.clipboard) {
-      return;
-    }
+    linkTag.addEventListener("click", async (event) => {
+      event.preventDefault();
+      const currentTarget = event.currentTarget as HTMLElement;
+      currentTarget.insertAdjacentHTML(
+        "beforeend",
+        "<span>Kopiert til utklippstavlen</span>"
+      );
 
-    const text = event.currentTarget.innerText;
+      if (!navigator.clipboard) {
+        return;
+      }
 
-    try {
-      await navigator.clipboard.writeText(text);
-      event.target.classList.add('is-active');
-      event.target.style.setProperty('--state', 'visible');
-      setTimeout(() => {
-        event.target.classList.remove('is-active');
-        event.target.firstElementChild.remove();
-        setTimeout(() => {
-          event.target.style.setProperty('--state', 'hidden');
-        }, 1000);
-      }, 30000);
-    } catch (err) {
-      console.error('Kunne ikke kopiere!', err);
-    }
-  });
+      const text = currentTarget.innerText;
+
+      try {
+        if (text) {
+          await navigator.clipboard.writeText(text);
+          const target = event.target as HTMLElement;
+          target.classList.add("is-active");
+          target.style.setProperty("--state", "visible");
+          setTimeout(() => {
+            target.classList.remove("is-active");
+            target.firstElementChild?.remove();
+            setTimeout(() => {
+              target.style.setProperty("--state", "hidden");
+            }, 1000);
+          }, 30000);
+        }
+      } catch (err) {
+        console.error("Kunne ikke kopiere!", err);
+      }
+    });
+  } else {
+    console.error("Link tag not found!");
+  }
 </script>

@@ -11,9 +11,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.5.4",
-    "astro": "^4.4.0",
-    "typescript": "^5.3.3"
+    "@astrojs/check": "^0.5.10",
+    "astro": "^4.5.16",
+    "typescript": "^5.4.4"
   },
   "devDependencies": {
     "vite-plugin-lightningcss": "^0.0.5"

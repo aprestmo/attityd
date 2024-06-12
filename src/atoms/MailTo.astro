@@ -10,56 +10,63 @@ const { email } = Astro.props as Props;
 </attityd-mailto>
 
 <script>
-  customElements.define('attityd-mailto', class extends HTMLElement {
+ customElements.define('attityd-mailto', class extends HTMLElement {
 
-    constructor () {
+constructor() {
+  super();
 
-      super();
+  // this.attachShadow({ mode: 'open' });
+  // this.shadowRoot.innerHTML = `
+  //   <style>
+  //     a {
+  //       --state: hidden;
+  //     }
+  //     .is-active {
+  //       --state: visible;
+  //     }
+  //   </style>
+  // `;
 
-      this.link = this.querySelector('a');
+  this.link = this.querySelector('a');
+  this.link.addEventListener('click', this);
+}
 
-      this.link.addEventListener('click', this);
+async handleEvent(event) {
+  if (event.type === 'click') {
+    event.preventDefault();
+    var currentTarget = event.currentTarget;
+    currentTarget.insertAdjacentHTML(
+      'beforeend',
+      '<span>Kopiert til utklippstavlen</span>'
+    );
+
+    if (!navigator.clipboard) {
+      return;
     }
-  });
 
-  // const linkTag: HTMLAnchorElement | null = document.querySelector("a");
+    var text = this.textContent;
 
-  // if (linkTag !== null) {
-  //   linkTag.style.setProperty("--state", "hidden");
-
-  //   linkTag.addEventListener("click", async (event) => {
-  //     event.preventDefault();
-  //     const currentTarget = event.currentTarget as HTMLElement;
-  //     currentTarget.insertAdjacentHTML(
-  //       "beforeend",
-  //       "<span>Kopiert til utklippstavlen</span>"
-  //     );
-
-  //     if (!navigator.clipboard) {
-  //       return;
-  //     }
-
-  //     const text = currentTarget.innerText;
-
-  //     try {
-  //       if (text) {
-  //         await navigator.clipboard.writeText(text);
-  //         const target = event.target as HTMLElement;
-  //         target.classList.add("is-active");
-  //         target.style.setProperty("--state", "visible");
-  //         setTimeout(() => {
-  //           target.classList.remove("is-active");
-  //           target.firstElementChild?.remove();
-  //           setTimeout(() => {
-  //             target.style.setProperty("--state", "hidden");
-  //           }, 1000);
-  //         }, 30000);
-  //       }
-  //     } catch (err) {
-  //       console.error("Kunne ikke kopiere!", err);
-  //     }
-  //   });
-  // } else {
-  //   console.error("Link tag not found!");
-  // }
+    try {
+      if (text) {
+        await navigator.clipboard.writeText(text);
+        var target = event.target;
+        target.classList.add('is-active');
+        target.style.setProperty('--state', 'visible');
+        setTimeout(() => {
+          target.classList.remove('is-active');
+          var span = target.querySelector('span');
+          if (span) {
+            span.remove();
+          }
+          setTimeout(() => {
+            target.style.setProperty('--state', 'hidden');
+          }, 1000);
+        }, 30000);
+      }
+    } catch (err) {
+      console.error('Kunne ikke kopiere!', err);
+    }
+  }
+}
+});
 </script>

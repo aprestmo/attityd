@@ -5,48 +5,61 @@ interface Props {
 
 const { email } = Astro.props as Props;
 ---
-
-<a href="mailto:{email}">{email}</a>
+<attityd-mailto>
+  <a href=`mailto:${email}`>{email}</a>
+</attityd-mailto>
 
 <script>
-  const linkTag: HTMLAnchorElement | null = document.querySelector("a");
+  customElements.define('attityd-mailto', class extends HTMLElement {
 
-  if (linkTag !== null) {
-    linkTag.style.setProperty("--state", "hidden");
+    constructor () {
 
-    linkTag.addEventListener("click", async (event) => {
-      event.preventDefault();
-      const currentTarget = event.currentTarget as HTMLElement;
-      currentTarget.insertAdjacentHTML(
-        "beforeend",
-        "<span>Kopiert til utklippstavlen</span>"
-      );
+      super();
 
-      if (!navigator.clipboard) {
-        return;
-      }
+      this.link = this.querySelector('a');
 
-      const text = currentTarget.innerText;
+      this.link.addEventListener('click', this);
+    }
+  });
 
-      try {
-        if (text) {
-          await navigator.clipboard.writeText(text);
-          const target = event.target as HTMLElement;
-          target.classList.add("is-active");
-          target.style.setProperty("--state", "visible");
-          setTimeout(() => {
-            target.classList.remove("is-active");
-            target.firstElementChild?.remove();
-            setTimeout(() => {
-              target.style.setProperty("--state", "hidden");
-            }, 1000);
-          }, 30000);
-        }
-      } catch (err) {
-        console.error("Kunne ikke kopiere!", err);
-      }
-    });
-  } else {
-    console.error("Link tag not found!");
-  }
+  // const linkTag: HTMLAnchorElement | null = document.querySelector("a");
+
+  // if (linkTag !== null) {
+  //   linkTag.style.setProperty("--state", "hidden");
+
+  //   linkTag.addEventListener("click", async (event) => {
+  //     event.preventDefault();
+  //     const currentTarget = event.currentTarget as HTMLElement;
+  //     currentTarget.insertAdjacentHTML(
+  //       "beforeend",
+  //       "<span>Kopiert til utklippstavlen</span>"
+  //     );
+
+  //     if (!navigator.clipboard) {
+  //       return;
+  //     }
+
+  //     const text = currentTarget.innerText;
+
+  //     try {
+  //       if (text) {
+  //         await navigator.clipboard.writeText(text);
+  //         const target = event.target as HTMLElement;
+  //         target.classList.add("is-active");
+  //         target.style.setProperty("--state", "visible");
+  //         setTimeout(() => {
+  //           target.classList.remove("is-active");
+  //           target.firstElementChild?.remove();
+  //           setTimeout(() => {
+  //             target.style.setProperty("--state", "hidden");
+  //           }, 1000);
+  //         }, 30000);
+  //       }
+  //     } catch (err) {
+  //       console.error("Kunne ikke kopiere!", err);
+  //     }
+  //   });
+  // } else {
+  //   console.error("Link tag not found!");
+  // }
 </script>
